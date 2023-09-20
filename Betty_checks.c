@@ -1,12 +1,20 @@
-#include <stdio.h>
+#include <unistd.h>
 
-/**
- * main - Entry point
- * Description: The main function that prints "Betty is Happy!"
- * Return: 0 (Success)
- */
+void custom_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
 int main(void)
 {
-	printf("Betty is Happy!\n");
+	char message[] = "Betty is Happy!\n";
+	int i = 0;
+
+	while (message[i])
+	{
+	custom_putchar(message[i]);
+	i++;
+	}
+
 	return (0);
 }
