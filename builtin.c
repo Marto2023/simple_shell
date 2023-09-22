@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * _ourexit - Exits the shell.
+ * _myexit - Exits the shell.
  * @info: Structure containing potential arguments. Used to maintain
  *          constant function prototype.
  *  Return: Exits with a given exit status:
@@ -9,7 +9,7 @@
  *         -2  if there is no argument
  *         1 if the argument is an illegal number
  */
-int _ourexit(info_t *info)
+int _myexit(info_t *info)
 {
 	int exitcheck;
 
@@ -82,12 +82,12 @@ int _mycd(info_t *info)
 }
 
 /**
- * _ourhelp - Changes the current directory of the process.
+ * _myhelp - Changes the current directory of the process.
  * @info: Structure containing potential arguments. Used to maintain
  *          constant function prototype.
  *  Return: Always 0
  */
-int _ourhelp(info_t *info)
+int _myhelp(info_t *info)
 {
 	char **arg_array;
 

@@ -1,12 +1,12 @@
 #include "shell.h"
 
 /**
- * _ourenv - Prints the current environment
+ * _myenv - Prints the current environment
  * @info: Structure containing potential arguments. Used to maintain
  *          constant function prototype.
  * Return: Always 0
  */
-int _ourenv(info_t *info)
+int _myenv(info_t *info)
 {
 	print_list_str(info->env);
 	return (0);
@@ -35,12 +35,12 @@ char *_getenv(info_t *info, const char *name)
 }
 
 /**
- * _oursetenv - Initializes a new environment variable or modifies an existing one.
+ * _mysetenv - Initializes a new environment variable or modifies an existing one.
  * @info: Structure containing potential arguments. Used to maintain
  *        constant function prototype.
  *  Return: 0 on success, 1 on error.
  */
-int _oursetenv(info_t *info)
+int _mysetenv(info_t *info)
 {
 	if (info->argc != 3)
 	{
@@ -53,12 +53,12 @@ int _oursetenv(info_t *info)
 }
 
 /**
- * _ourunsetenv - Remove an environment variable
+ * _myunsetenv - Remove an environment variable
  * @info: Structure containing potential arguments. Used to maintain
  *        constant function prototype.
  *  Return: 0 on success, 1 on error.
  */
-int _ourunsetenv(info_t *info)
+int _myunsetenv(info_t *info)
 {
 	int i;
 

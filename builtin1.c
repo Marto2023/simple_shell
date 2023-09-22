@@ -1,13 +1,13 @@
 #include "shell.h"
 
 /**
- * _ourhistory - Displays the history list, one command per line, preceded
+ * _myhistory - Displays the history list, one command per line, preceded
  *              by line numbers starting at 0.
  * @info: Structure containing potential arguments. Used to maintain
  *        a constant function prototype.
  * Return: Always 0
  */
-int _ourhistory(info_t *info)
+int _myhistory(info_t *info)
 {
 	print_list(info->history);
 	return (0);
